@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+
+    <script>
+        setInterval(() => {
+    d = new Date();
+    htime = d.getHours();
+    mtime = d.getMinutes();
+    stime = d.getSeconds();
+    hrotation = 30*htime + mtime/2;
+    mrotation = 6*mtime;
+    srotation = 6*stime;
+
+    hour.style.transform = `rotate(${hrotation}deg)`;
+    min.style.transform = `rotate(${mrotation}deg)`;
+    sec.style.transform = `rotate(${srotation}deg)`;
+}, 1000);
+        
+    </script>
+</head>
+<body style="background: url(./ColorsOfSky.jpg);">
+    <div id="clock">
+        <div id="hour"></div>
+        <div id="min"></div>
+        <div id="sec"></div>
+        <div id="circle"></div>    
+    </div>
+
+</body>
+</html>
+
+<style>
+ #clock{  
+    border:2px solid black;
+    position: relative;
+    top:100px;
+     bottom: 0;
+    margin: auto;
+    height: 25vw;
+    width: 25vw; 
+    background: url(Clock.png) no-repeat;
+    background-size: 100%;
+    border-radius:50%;
+
+}
+
+#hour, #min, #sec{
+    position: absolute;
+    border-radius: 15px; 
+    transform-origin: bottom;
+}
+#hour{
+    background: black;
+    width: 1.8%;
+    height: 20%;
+    top: 30%;
+    left: 48.85%;
+}
+#min{
+    background: black;
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 48.9%;
+}
+#sec{
+    background: red;
+    width: 1%;  
+    height: 40%;
+    top: 9.5%;
+    left: 49.25%;
+    opacity:0.8;
+}
+
+#circle{
+    position:absolute;
+    background-color:black;
+    height:10px;
+    width:10px;
+    border-radius:50%;
+    top:48.5%;
+    left:48%;
+
+    
+}
+
+</style>
