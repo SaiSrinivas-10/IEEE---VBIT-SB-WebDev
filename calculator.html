@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <script>
+        function display(n){
+            calci.displaybox.value=calci.displaybox.value+n;
+        }
+       
+        window.onload = function() {
+            document.getElementById("displaybox").focus();
+        }
+    </script>
+
+</head>
+
+
+<body>
+
+    <div class="Calculator">
+        <form name=calci>
+        <input type="text" name="displaybox" id="displaybox" style="text-align:right; margin:10px; padding:12px;" focus()>
+        <br>
+
+        <div class="buttons">
+
+        <input type="button" name="btn9" value="9"  onclick="display(btn9.value)">
+        <input type="button" name="btn8" value="8" onclick="display(btn8.value)">
+        <input type="button" name="btn7" value="7" onclick="display(btn7.value)">
+        <input type="button" name="plus" value="+" onclick="display(plus.value)">
+    
+        <br>
+    
+        <input type="button" name="btn6" value="6"  onclick="display(btn6.value)">
+        <input type="button" name="btn5" value="5" onclick="display(btn5.value)">
+        <input type="button" name="btn4" value="4" onclick="display(btn4.value)">
+        <input type="button" name="minus" value="-" onclick="display(minus.value)">
+    
+        <br>
+    
+        <input type="button" name="btn3" value="3" onclick="display(btn3.value)">
+        <input type="button" name="btn2" value="2" onclick="display(btn2.value)">
+        <input type="button" name="btn1" value="1" onclick="display(btn1.value)">
+        <input type="button" name="divide" value="/" onclick="display(divide.value)">
+    
+        <br>
+    
+        <input type="button" name="btn0" value="0"  onclick="display(btn0.value)">
+        <input type="button" name="point" value="." onclick="display(point.value)">
+        <input type="button" name="multiply" value="*" onclick="display(multiply.value)">
+        <input type="button" name="equal" value="=" onclick="displaybox.value=eval(displaybox.value)">
+
+        <br>
+
+        <input type="button" name="clear" value="clear" onclick="displaybox.value=''">
+    </div>
+    
+    </form>
+    </div>
+    
+    
+</body>
+</html>
+
+<style>
+        .Calculator{
+            text-align:center;
+            position: absolute;
+            top:150px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            
+        }
+
+        .buttons input{
+            padding:16px;
+            margin:2px;
+        }
+
+</style>
